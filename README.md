@@ -65,7 +65,7 @@ Each delimiting comment MUST start with `PARTS` and then SHOULD have at least on
 
 Example: A comment separating a part before it named "critical" from a part after it named "other":
 ```css
-/* PARTS before=critical after=noncritical */
+/* PARTS before=critical after=other */
 ```
 
 Both of the part names are case-sensitive and MUST NOT contain spaces. In either case, the named part before or after the comment is delimited by the previous (or next, respectively) `PARTS` comment or the start/end of the CSS file. Any `PARTS` comment acts as a delimiter; the behaviour does NOT depend on that comment's name definitions. In fact, it is possible to define the same part of the CSS file with two different names in its delimiter comments:
