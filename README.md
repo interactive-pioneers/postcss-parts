@@ -68,27 +68,33 @@ Example: A comment separating a part before it named "critical" from a part afte
 /* PARTS before=critical after=other */
 ```
 
-Both of the part names are case-sensitive and MUST NOT contain spaces. In either case, the named part before or after the comment is delimited by the previous (or next, respectively) `PARTS` comment or the start/end of the CSS file. Any `PARTS` comment acts as a delimiter; the behaviour does NOT depend on that comment's name definitions. In fact, it is possible to define the same part of the CSS file with two different names in its delimiter comments:
+Both part names are case-sensitive and MUST NOT contain spaces. In either case, the named part before or after the comment is delimited by the previous (or next, respectively) `PARTS` comment or the start/end of the CSS file. Any `PARTS` comment acts as a delimiter; the behaviour does NOT depend on that comment's name definitions. In fact, it is possible to define the same part of the CSS file with two different names in its delimiter comments:
 ```css
-/* ... some CSS that belongs to Part 1 ... */
+.part1 {
+  display: block;
+}
 
 /* PARTS before=Part1 after=Part2 */
 
-/* ... some CSS that belongs to Part 2 ... */
+.part2 {
+  display:inline;
+}
 
 /* PARTS before=PartTwo after=PartThree */
 
-/* ... some CSS that belongs to Part 3 ... */
+.part3 {
+  display: flex;
+}
 ```
 
-The CSS that belongs to Part 2 can be referred to by both `Part2` and `PartTwo`.
+The CSS part with the `.part2` selector can be referred to by both `Part2` and `PartTwo`.
 
 It is also possible to use the same name for multiple parts of the CSS file. Each of these parts will be included in the resulting CSS if that name is selected in the PostCSS configuration.
 
-The `PARTS` comments themselves will NOT be included int he resulting CSS.
+The `PARTS` comments themselves will NOT be included in the resulting CSS.
 
 ### In the PostCSS configuration
-The plugin expects a configuration object with a "parts" property. This is an example for a possible configuration using `postcss.config.js`:
+The plugin expects a configuration object with a `parts` property. This is an example for a possible configuration using `postcss.config.js`:
 ```js
 module.exports = () => ({
   plugins: [
@@ -99,7 +105,7 @@ module.exports = () => ({
 });
 ```
 
-The value of the `parts` property is an array of strings that lists the parts to be included in the result CSS. It is also possible to use a string with all the parts separated by spaces:
+The value of the `parts` property is an array of strings that lists the parts to be included in the resulting CSS. It is also possible to use a string with all the parts separated by spaces:
 ```js
 require('postcss-parts')({ parts: 'critical critical2' })
 ```
