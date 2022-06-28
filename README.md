@@ -77,7 +77,7 @@ Both part names are case-sensitive and MUST NOT contain spaces. In either case, 
 /* PARTS before=Part1 after=Part2 */
 
 .part2 {
-  display:inline;
+  display: inline;
 }
 
 /* PARTS before=PartTwo after=PartThree */
