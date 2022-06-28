@@ -2,7 +2,7 @@
   "name": "postcss-parts",
   "version": "1.0.0",
   "description": "PostCSS plugin for CSS partitioning",
-  "keywords": ["postcss", "css", "postcss-plugin", "postcss-parts"],
+  "keywords": ["postcss", "css", "postcss-plugin", "postcss-parts", "parts", "split", "splitter", "critical"],
   "scripts": {
     "test": "jest --coverage && eslint ."
   },
