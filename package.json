@@ -1,14 +1,14 @@
 {
   "name": "postcss-parts",
   "version": "1.0.0",
-  "description": "PostCSS plugin CSS Splitter",
+  "description": "PostCSS plugin for CSS partitioning",
   "keywords": ["postcss", "css", "postcss-plugin", "postcss-parts"],
   "scripts": {
     "test": "jest --coverage && eslint ."
   },
   "author": "Thomas Weiler <tw@interactive-pioneers.de>",
   "license": "MIT",
-  "repository": "sinescape/postcss-css-splitter",
+  "repository": "https://github.com/interactive-pioneers/postcss-parts",
   "engines": {
     "node": ">=12.0.0"
   },
