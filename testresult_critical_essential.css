@@ -1,0 +1,19 @@
+.roadsinfo {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    width: auto;
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+.roadsinfo::after {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 1px;
+    height: auto;
+    content: '';
+}

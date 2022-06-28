@@ -1,0 +1,8 @@
+.roadsinfo::after {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 1px;
+    height: auto;
+    content: '';
+}
