@@ -27,6 +27,14 @@ it('gets critical and essential', async () => {
   );
 });
 
+it('gets critical and essential with string config', async () => {
+  await run(
+    fs.readFileSync('./testsource.css', {encoding:'utf8', flag:'r'}),
+    fs.readFileSync('./testresult_critical_essential.css', {encoding:'utf8', flag:'r'}),
+    {parts: 'essential critical'}
+  );
+});
+
 it('gets non-critical', async () => {
   await run(
     fs.readFileSync('./testsource.css', {encoding:'utf8', flag:'r'}),
